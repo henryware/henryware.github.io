@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="view-transition" content="same-origin"> <!-- Opt-in --> 
+<link rel="prefetch"href="index.html"/>
+<link rel="prefetch" href="Compile_Long_Pattern.html"/><link rel="prefetch" href="DotStar_vs_Long_Text.html"/><link rel="prefetch" href="Fail_to_Locate_Phone_Number_in_Long_Text.html"/><link rel="prefetch" href="Fail_to_Match_Phone_Number_in_Long_Text.html"/><link rel="prefetch" href="Locate_Phone_Number_in_Long_Text.html"/><link rel="prefetch" href="Match_Phone_Number_in_Long_Text.html"/><link rel="prefetch" href="Locate_All_Torture_Test.html"/><link rel="prefetch" href="Backtrack_Torture_Test.html"/>
+<title><b>Fail to Locate Phone Number in Long Text</b><br>/(?:\d{3}\s?-\s?|\(?:\d{3}\)\s{0,2})(?:\d{3}-\d{4})/ vs ⟨ascii printable string⟩<br><sup>higher is better</sup></title>
+ <style>
+.chart {
+  view-transition-name: chart-div; /* Unique identifier for transition */
+}
+@keyframes fade-in {
+ from { opacity: 0; }
+ to { opacity: 1; }
+}
+a {
+ display: block;
+ text-align: left;
+ margin-top: 20px;
+ color: #0066cc;
+ text-decoration: none;
+ }
+::view-transition-new(root) {
+ animation: fade-in 0.9s ease;
+ }
+</style>
+<script src="https://cdn.plot.ly/plotly-1.58.5.min.js"></script>
+</head>
+<body>
+<div id="chart"></div>
+<script>
+(function () {
+  var data0 = {"x":[32.0,64.0,128.0,256.0,512.0,1024.0,2048.0,4096.0,8192.0,16384.0,32768.0,65536.0,131072.0,262144.0,524288.0,1048576.0,2097152.0,4194304.0],"name":"BricsScreen","type":"scatter","y":[1.04533096607104E8,1.11904119374464E8,1.19466726461568E8,1.37436870659072E8,1.5718052681728E8,1.591031295232E8,1.613539124224E8,1.61016664707072E8,1.60177191755776E8,1.7751523065856E8,1.80006332858368E8,1.9861565472768E8,2.30271484690432E8,2.31016835579904E8,2.1109454405632E8,1.70801786519552E8,1.65275727036416E8,1.64499667550208E8]};
+  var data1 = {"x":[32.0,64.0,128.0,256.0,512.0,1024.0,2048.0,4096.0,8192.0,16384.0,32768.0,65536.0,131072.0,262144.0,524288.0,1048576.0,2097152.0,4194304.0],"name":"DkBrics","type":"scatter","y":[2.17529148750496E8,1.83151382639552E8,1.50456330766848E8,1.6023537218432E8,1.73405901044224E8,1.65099458187264E8,1.64405772326912E8,1.7777650243584E8,1.7845691256832E8,1.23973486149632E8,1.24282719141888E8,1.26246181797888E8,1.26516790296576E8,1.30158420557824E8,1.32840189591552E8,1.4173360095232E8,1.42885378850816E8,1.43425793949696E8]};
+  var data2 = {"x":[32.0,64.0,128.0,256.0,512.0,1024.0,2048.0,4096.0,8192.0,16384.0,32768.0,65536.0,131072.0,262144.0,524288.0,1048576.0,2097152.0,4194304.0],"name":"Florian","type":"scatter","y":[1.5582110432064E7,1.299963299456E7,1.225247084736E7,1.0208669283584E7,1.0819397221376E7,9904002.449408,9815741.833216,9783294.066688,9790133.813248,9742069.956608,9772746.768384,1.07507499008E7,9970859.900928,9489083.531264,1.0298888552448E7,9557390.655488,9531562.131456,9499406.49984]};
+  var data3 = {"x":[32.0,64.0,128.0,256.0,512.0,1024.0,2048.0,4096.0,8192.0,16384.0,32768.0,65536.0,131072.0,262144.0,524288.0,1048576.0,2097152.0,4194304.0],"name":"JavaUtil","type":"scatter","y":[4.7084470762528E7,4.316243195296E7,3.2516364198272E7,4.8085397534976E7,3.1290204183552E7,3.225179594752E7,3.1200068923392E7,3.13519782912E7,3.0756559126528E7,3.0858471636992E7,2.9694861377536E7,3.081232973824E7,3.235275538432E7,3.0030536900608E7,3.0113751629824E7,3.2005662179328E7,3.2309466103808E7,3.0022949666816E7]};
+  var data4 = {"x":[32.0,64.0,128.0,256.0,512.0,1024.0,2048.0,4096.0,8192.0,16384.0,32768.0,65536.0,131072.0,262144.0,524288.0,1048576.0,2097152.0,4194304.0],"name":"Joni","type":"scatter","y":[7.066597273744E7,4.5709280681696E8,2.3356982262464E8,2.03902824628224E8,1.5316416245504E8,1.86200873909248E8,1.737230145536E8,2.36598649114624E8,2.42046896914432E8,2.31221437267968E8,2.0826924761088E8,2.17843957694464E8,2.30978010087424E8,2.23883007623168E8,2.25382374047744E8,2.15918225391616E8,2.08554885644288E8,2.07223057809408E8]};
+  var data5 = {"x":[32.0,64.0,128.0,256.0,512.0,1024.0,2048.0,4096.0,8192.0,16384.0,32768.0,65536.0,131072.0,262144.0,524288.0,1048576.0,2097152.0,4194304.0],"name":"KMY","type":"scatter","y":[7.1617439103584E7,6.3979182793984E7,5.4894168417152E7,4.4032362668288E7,4.4866262808064E7,3.7151427248128E7,4.4640036339712E7,4.4791944224768E7,4.4714081959936E7,3.9917800177664E7,3.992272846848E7,4.1551974367232E7,3.9894895558656E7,4.07996071936E7,4.69832673263616E8,4.0732376170496E7,6.17923290857472E8,1.51815534411776E8]};
+  var data6 = {"x":[32.0,64.0,128.0,256.0,512.0,1024.0,2048.0,4096.0,8192.0,16384.0,32768.0,65536.0,131072.0,262144.0,524288.0,1048576.0,2097152.0,4194304.0],"name":"MonqJFA","type":"scatter","y":[5.4015491200224E7,3.7793131375552E7,3.8112646170368E7,4.011826231808E7,3.8400338930688E7,3.9338189172736E7,3.8585087643648E7,3.2143684673536E7,3.806477791232E7,3.3709044547584E7,3.3681315856384E7,3.3602061795328E7,3.670872489984E7,3.17942792192E7,3.340678987776E7,3.20619937792E7,3.2037920571392E7,3.1898189430784E7]};
+  var data7 = {"x":[32.0,64.0,128.0,256.0,512.0,1024.0,2048.0,4096.0,8192.0,16384.0,32768.0,65536.0,131072.0,262144.0,524288.0,1048576.0,2097152.0,4194304.0],"name":"Re2J","type":"scatter","y":[6765243.07056,6566976.039296,6850643.770368,6920217.700864,6970016.983552,7104522.981376,7087256.064,7089235.017728,6931362.52928,7005482.287104,6728143.798272,6835048.480768,6991639.3472,7039908.839424,6897783.013376,7021175.76704,7002558.30016,7071240.02816]};
+
+  var data = [data0, data1, data2, data3, data4, data5, data6, data7];
+  var layout = {"height":800,"title":"<b>Fail to Locate Phone Number in Long Text</b><br>/(?:\\d{3}\\s?-\\s?|\\(?:\\d{3}\\)\\s{0,2})(?:\\d{3}-\\d{4})/ vs ⟨ascii printable string⟩<br><sup>higher is better</sup>","yaxis":{"title":"Throughput(bytes/s)","type":"log"},"xaxis":{"title":"Data Length (bytes)","type":"log"}};
+ var config = {};
+
+  Plotly.plot('chart', data, layout, config);
+})();
+</script>
+<ul><li><a href="index.html">Menu</a></li><li><a href="Compile_Long_Pattern.html">Compile Long Pattern</a></li><li><a href="DotStar_vs_Long_Text.html">DotStar vs Long Text</a></li><li><a href="Fail_to_Locate_Phone_Number_in_Long_Text.html">Fail to Locate Phone Number in Long Text</a></li><li><a href="Fail_to_Match_Phone_Number_in_Long_Text.html">Fail to Match Phone Number in Long Text</a></li><li><a href="Locate_Phone_Number_in_Long_Text.html">Locate Phone Number in Long Text</a></li><li><a href="Match_Phone_Number_in_Long_Text.html">Match Phone Number in Long Text</a></li><li><a href="Locate_All_Torture_Test.html">Locate All Torture Test</a></li><li><a href="Backtrack_Torture_Test.html">Backtrack Torture Test</a></li></ul>
+</body>
+</html>
+                

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="view-transition" content="same-origin"> <!-- Opt-in --> 
+<link rel="prefetch"href="index.html"/>
+<link rel="prefetch" href="Compile_Long_Pattern.html"/><link rel="prefetch" href="DotStar_vs_Long_Text.html"/><link rel="prefetch" href="Fail_to_Locate_Phone_Number_in_Long_Text.html"/><link rel="prefetch" href="Fail_to_Match_Phone_Number_in_Long_Text.html"/><link rel="prefetch" href="Locate_Phone_Number_in_Long_Text.html"/><link rel="prefetch" href="Match_Phone_Number_in_Long_Text.html"/><link rel="prefetch" href="Locate_All_Torture_Test.html"/><link rel="prefetch" href="Backtrack_Torture_Test.html"/>
+<title><b>DotStar vs Long Text</b><br>/.*/ vs ⟨random ascii printable string⟩<br><sup>higher is better</sup></title>
+ <style>
+.chart {
+  view-transition-name: chart-div; /* Unique identifier for transition */
+}
+@keyframes fade-in {
+ from { opacity: 0; }
+ to { opacity: 1; }
+}
+a {
+ display: block;
+ text-align: left;
+ margin-top: 20px;
+ color: #0066cc;
+ text-decoration: none;
+ }
+::view-transition-new(root) {
+ animation: fade-in 0.9s ease;
+ }
+</style>
+<script src="https://cdn.plot.ly/plotly-1.58.5.min.js"></script>
+</head>
+<body>
+<div id="chart"></div>
+<script>
+(function () {
+  var data0 = {"x":[32.0,64.0,128.0,256.0,512.0,1024.0,2048.0,4096.0,8192.0,16384.0,32768.0,65536.0,131072.0,262144.0,524288.0,1048576.0,2097152.0,4194304.0],"name":"BricsScreen","type":"scatter","y":[2.90295326987808E8,2.9846488522752E8,3.03002817805568E8,3.07483481382656E8,3.07856740810752E8,3.13961099753472E8,3.11227264483328E8,3.12929084710912E8,3.148860831744E8,2.91725189873664E8,3.04070792216576E8,2.8746099687424E8,3.14103532355584E8,3.14313413492736E8,3.10988650840064E8,3.11046770262016E8,3.1285027274752E8,3.06145591820288E8]};
+  var data1 = {"x":[32.0,64.0,128.0,256.0,512.0,1024.0,2048.0,4096.0,8192.0,16384.0,32768.0,65536.0,131072.0,262144.0,524288.0,1048576.0,2097152.0,4194304.0],"name":"DkBrics","type":"scatter","y":[2.89004529054688E8,3.00698971594624E8,3.01759435835392E8,3.092027656128E8,3.12306527586816E8,3.12640632065024E8,3.10357238470656E8,3.14568694022144E8,3.15000173944832E8,2.95361756135424E8,2.98112476741632E8,2.88162489696256E8,3.13669392007168E8,3.11921333764096E8,3.10629985943552E8,3.11437838778368E8,3.11201798029312E8,3.14064358080512E8]};
+  var data2 = {"x":[32.0,64.0,128.0,256.0,512.0,1024.0,2048.0,4096.0,8192.0,16384.0,32768.0,65536.0,131072.0,262144.0,524288.0,1048576.0,2097152.0,4194304.0],"name":"Florian","type":"scatter","y":[6.1786866915712E7,6.2097056038208E7,6.9317037071104E7,6.942676998656E7,8.3427635506688E7,8.8102914533376E7,8.8685950779392E7,8.8065425616896E7,8.777662251008E7,8.5055814680576E7,8.4490670276608E7,8.6030078246912E7,8.4879966208E7,8.966424100864E7,8.0514514419712E7,3.4183744323584E7,2.8714492493824E7,2.6860398313472E7]};
+  var data3 = {"x":[32.0,64.0,128.0,256.0,512.0,1024.0,2048.0,4096.0,8192.0,16384.0,32768.0,65536.0,131072.0,262144.0,524288.0,1048576.0,2097152.0,4194304.0],"name":"JavaUtil","type":"scatter","y":[2.0475946174208E8,2.28549303464768E8,2.75512532155776E8,2.91276995652864E8,2.96483344203776E8,3.0729044772352E8,3.04219259348992E8,3.1014095896576E8,2.96391719436288E8,2.85623601987584E8,2.94331028013056E8,3.18083396534272E8,3.5658032218112E8,4.1759084904448E8,3.6816149807104E8,3.49975025287168E8,3.168816070656E8,3.08074820665344E8]};
+  var data4 = {"x":[32.0,64.0,128.0,256.0,512.0,1024.0,2048.0,4096.0,8192.0,16384.0,32768.0,65536.0,131072.0,262144.0,524288.0,1048576.0,2097152.0,4194304.0],"name":"Joni","type":"scatter","y":[6.230464143888E7,6.2769181784832E7,6.7664649390208E7,6.1515349044736E7,6.354048258304E7,6.252832214528E7,6.2242408820736E7,6.1615581724672E7,6.0102513590272E7,5.9584420642816E7,5.9527642447872E7,5.9060826144768E7,5.9190860578816E7,6.2697324150784E7,3.0153961373696E7,2.2345849765888E7,2.0174069563392E7,1.9609574965248E7]};
+  var data5 = {"x":[32.0,64.0,128.0,256.0,512.0,1024.0,2048.0,4096.0,8192.0,16384.0,32768.0,65536.0,131072.0,262144.0,524288.0,1048576.0,2097152.0,4194304.0],"name":"KMY","type":"scatter","y":[5.7294296724272E8,7.86412564362112E8,9.69543963504256E8,1.067030443193344E9,1.060599317014528E9,1.104466067756032E9,1.083407181856768E9,1.068867851804672E9,1.062909014417408E9,1.070970645823488E9,7.74857446293504E8,7.68010223878144E8,7.7181183393792E8,7.72078494547968E8,7.73854702600192E8,7.36957408739328E8,6.56245461614592E8,5.41680683974656E8]};
+  var data6 = {"x":[32.0,64.0,128.0,256.0,512.0,1024.0,2048.0,4096.0,8192.0,16384.0,32768.0,65536.0,131072.0,262144.0,524288.0,1048576.0,2097152.0,4194304.0],"name":"MonqJFA","type":"scatter","y":[6.94136708096E7,7.4341615109248E7,8.8317639683072E7,8.2248711313408E7,6.7300193092608E7,6.7432082245632E7,7.3474674399232E7,7.227964655616E7,7.2964466008064E7,7.2716487000064E7,6.8596186382336E7,7.1643484585984E7,6.8637987438592E7,6.8762973503488E7,6.86015905792E7,7.2042632183808E7,7.13001271296E7,6.835916505088E7]};
+  var data7 = {"x":[32.0,64.0,128.0,256.0,512.0,1024.0,2048.0,4096.0,8192.0,16384.0,32768.0,65536.0,131072.0,262144.0,524288.0,1048576.0,2097152.0,4194304.0],"name":"Re2J","type":"scatter","y":[1.094210625856E7,1.133890618208E7,1.1923778286848E7,1.2153706205952E7,1.239725947648E7,1.2564166408192E7,1.223328932864E7,1.2564217597952E7,1.231199207424E7,1.2380871049216E7,1.2316430434304E7,1.23259846656E7,1.2288597295104E7,1.2257671774208E7,1.2191259426816E7,1.225498034176E7,1.222187679744E7,1.2163620012032E7]};
+
+  var data = [data0, data1, data2, data3, data4, data5, data6, data7];
+  var layout = {"height":800,"title":"<b>DotStar vs Long Text</b><br>/.*/ vs ⟨random ascii printable string⟩<br><sup>higher is better</sup>","yaxis":{"title":"Throughput(bytes/s)","type":"log"},"xaxis":{"title":"Data Length (bytes)","type":"log"}};
+ var config = {};
+
+  Plotly.plot('chart', data, layout, config);
+})();
+</script>
+<ul><li><a href="index.html">Menu</a></li><li><a href="Compile_Long_Pattern.html">Compile Long Pattern</a></li><li><a href="DotStar_vs_Long_Text.html">DotStar vs Long Text</a></li><li><a href="Fail_to_Locate_Phone_Number_in_Long_Text.html">Fail to Locate Phone Number in Long Text</a></li><li><a href="Fail_to_Match_Phone_Number_in_Long_Text.html">Fail to Match Phone Number in Long Text</a></li><li><a href="Locate_Phone_Number_in_Long_Text.html">Locate Phone Number in Long Text</a></li><li><a href="Match_Phone_Number_in_Long_Text.html">Match Phone Number in Long Text</a></li><li><a href="Locate_All_Torture_Test.html">Locate All Torture Test</a></li><li><a href="Backtrack_Torture_Test.html">Backtrack Torture Test</a></li></ul>
+</body>
+</html>
+                

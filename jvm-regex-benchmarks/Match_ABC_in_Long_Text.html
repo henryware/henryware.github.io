@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="view-transition" content="same-origin"> <!-- Opt-in --> 
+<link rel="prefetch"href="index.html"/>
+<link rel="prefetch" href="Compile_Long_Pattern.html"/><link rel="prefetch" href="DotStar_vs_Long_Text.html"/><link rel="prefetch" href="Fail_to_Locate_Phone_Number_in_Long_Text.html"/><link rel="prefetch" href="Fail_to_Match_Phone_Number_in_Long_Text.html"/><link rel="prefetch" href="Locate_Phone_Number_in_Long_Text.html"/><link rel="prefetch" href="Match_ABC_in_Long_Text.html"/><link rel="prefetch" href="Match_Phone_Number_in_Long_Text.html"/><link rel="prefetch" href="Locate_All_Torture_Test.html"/><link rel="prefetch" href="Backtrack_Torture_Test.html"/>
+<title><b>Match ABC in Long Text</b><br>/[ -~]*ABCDEFGHIJKLMNZ/ vs <ascii printable> "ABCDEFGHIJKLMNZ"<br><sup>higher is better</sup></title>
+ <style>
+.chart {
+  view-transition-name: chart-div; /* Unique identifier for transition */
+}
+@keyframes fade-in {
+ from { opacity: 0; }
+ to { opacity: 1; }
+}
+a {
+ display: block;
+ text-align: left;
+ margin-top: 20px;
+ color: #0066cc;
+ text-decoration: none;
+ }
+::view-transition-new(root) {
+ animation: fade-in 0.9s ease;
+ }
+</style>
+<script src="https://cdn.plot.ly/plotly-1.58.5.min.js"></script>
+</head>
+<body>
+<div id="chart"></div>
+<script>
+(function () {
+  var data0 = {"x":[32.0,64.0,128.0,256.0,512.0,1024.0,2048.0,4096.0,8192.0,16384.0,32768.0,65536.0,131072.0,262144.0,524288.0,1048576.0,2097152.0,4194304.0],"name":"BricsScreen","type":"scatter","y":[1.62299656802848E8,1.66343161474752E8,1.65943606381184E8,1.69273363479808E8,1.9552897903104E8,1.93634873242624E8,1.97668768643072E8,1.9637115963392E8,1.98659854934016E8,1.91190974414848E8,2.05313818427392E8,2.25977047384064E8,2.474924998656E8,2.41778299764736E8,2.2427651538944E8,1.90690790211584E8,1.76568081055744E8,1.77366869475328E8]};
+  var data1 = {"x":[32.0,64.0,128.0,256.0,512.0,1024.0,2048.0,4096.0,8192.0,16384.0,32768.0,65536.0,131072.0,262144.0,524288.0,1048576.0,2097152.0,4194304.0],"name":"DkBrics","type":"scatter","y":[1.1642073722448E8,1.2365686564192E8,1.25032366791936E8,1.31304776436992E8,1.36967889883648E8,1.37146402583552E8,1.38363511420928E8,1.25088715845632E8,1.20575716753408E8,1.41143565959168E8,1.59649352548352E8,1.8550964486144E8,1.86418612928512E8,1.86570640195584E8,1.85826055028736E8,1.85036272828416E8,1.86614596763648E8,1.86040459460608E8]};
+  var data2 = {"x":[32.0,64.0,128.0,256.0,512.0,1024.0,2048.0,4096.0,8192.0,16384.0,32768.0,65536.0,131072.0,262144.0,524288.0,1048576.0,2097152.0,4194304.0],"name":"Florian","type":"scatter","y":[4.25734758832E7,4.6449201225344E7,6.4657021551488E7,7.0555362623744E7,8.0059281598976E7,9.1971366278144E7,9.2683243411456E7,9.35614918656E7,8.693925081088E7,8.7224523669504E7,8.6854330908672E7,8.6294237478912E7,8.6179363684352E7,8.4064914374656E7,8.003384246272E7,3.3143067246592E7,2.8188602269696E7,2.5772228083712E7]};
+  var data3 = {"x":[32.0,64.0,128.0,256.0,512.0,1024.0,2048.0,4096.0,8192.0,16384.0,32768.0,65536.0,131072.0,262144.0,524288.0,1048576.0,2097152.0,4194304.0],"name":"JavaUtil","type":"scatter","y":[8.1801776235744E7,1.24333823290944E8,1.78080865296512E8,2.23549139222016E8,2.76173555238912E8,3.06000846497792E8,3.21050462078976E8,3.26480256397312E8,2.83785996361728E8,2.66206324850688E8,2.90436448976896E8,3.17662756864E8,3.87747979329536E8,4.64802430058496E8,4.4034294022144E8,3.71132897165312E8,2.67242117791744E8,2.6598887653376E8]};
+  var data4 = {"x":[32.0,64.0,128.0,256.0,512.0,1024.0,2048.0,4096.0,8192.0,16384.0,32768.0,65536.0,131072.0,262144.0,524288.0,1048576.0,2097152.0,4194304.0],"name":"Joni","type":"scatter","y":[3.9170313281888E7,4.8912757928704E7,4.1853597725056E7,4.621706796544E7,5.1946466446336E7,5.3312877444096E7,5.2676883556352E7,4.8433714413568E7,5.2103104036864E7,5.300506632192E7,5.3846377234432E7,5.5957059862528E7,5.2182894379008E7,5.1765524037632E7,5.2923053637632E7,5.362138218496E7,5.222874218496E7,5.4566351536128E7]};
+  var data5 = {"x":[32.0,64.0,128.0,256.0,512.0,1024.0,2048.0,4096.0,8192.0,16384.0,32768.0,65536.0,131072.0,262144.0,524288.0,1048576.0,2097152.0,4194304.0],"name":"KMY","type":"scatter","y":[3.28613627581856E8,5.1535821424448E8,6.76224297575936E8,7.77116513738496E8,8.16407657173504E8,8.70866615758848E8,8.6499833607168E8,8.65251895881728E8,8.62649450217472E8,8.666853871616E8,7.68797837000704E8,7.66105281363968E8,7.65955163029504E8,7.66052599857152E8,7.63635430326272E8,7.3231569518592E8,6.54000420552704E8,5.39215867674624E8]};
+  var data6 = {"x":[32.0,64.0,128.0,256.0,512.0,1024.0,2048.0,4096.0,8192.0,16384.0,32768.0,65536.0,131072.0,262144.0,524288.0,1048576.0,2097152.0,4194304.0],"name":"MonqJFA","type":"scatter","y":[4.2333207722432E7,4.3501710190336E7,4.5451639348992E7,4.7814162080512E7,4.7584272932352E7,4.749639149056E7,4.7999467255808E7,4.597387065344E7,4.7237491318784E7,4.7349771747328E7,4.8316222701568E7,4.8075967758336E7,4.7868240330752E7,4.83067691008E7,4.8173372407808E7,4.795113406464E7,4.8171017306112E7,4.8347373109248E7]};
+  var data7 = {"x":[32.0,64.0,128.0,256.0,512.0,1024.0,2048.0,4096.0,8192.0,16384.0,32768.0,65536.0,131072.0,262144.0,524288.0,1048576.0,2097152.0,4194304.0],"name":"Re2J","type":"scatter","y":[8995741.711744,9699025.60928,9935728.708736,1.015324883456E7,9988156.774912,1.0402830662656E7,1.0767166386176E7,1.0815527428096E7,1.0795465162752E7,1.0171084537856E7,1.0805022457856E7,1.0410689757184E7,1.070916108288E7,1.074253266944E7,1.0754011430912E7,1.0669235634176E7,1.0808434098176E7,1.0714840301568E7]};
+
+  var data = [data0, data1, data2, data3, data4, data5, data6, data7];
+  var layout = {"height":800,"title":"<b>Match ABC in Long Text</b><br>/[ -~]*ABCDEFGHIJKLMNZ/ vs <ascii printable> \"ABCDEFGHIJKLMNZ\"<br><sup>higher is better</sup>","yaxis":{"title":"Throughput(bytes/s)","type":"log"},"xaxis":{"title":"Data Length (bytes)","type":"log"}};
+ var config = {};
+
+  Plotly.plot('chart', data, layout, config);
+})();
+</script>
+<p>Benchmark code and descriptions are at <a href="https://github.com/henryware/jvm-regex-benchmarks">https://github.com/henryware/jvm-regex-benchmarks</a></p>
+<ul><li><a href="index.html">Menu</a></li><li><a href="Compile_Long_Pattern.html">Compile Long Pattern</a></li><li><a href="DotStar_vs_Long_Text.html">DotStar vs Long Text</a></li><li><a href="Fail_to_Locate_Phone_Number_in_Long_Text.html">Fail to Locate Phone Number in Long Text</a></li><li><a href="Fail_to_Match_Phone_Number_in_Long_Text.html">Fail to Match Phone Number in Long Text</a></li><li><a href="Locate_Phone_Number_in_Long_Text.html">Locate Phone Number in Long Text</a></li><li><a href="Match_ABC_in_Long_Text.html">Match ABC in Long Text</a></li><li><a href="Match_Phone_Number_in_Long_Text.html">Match Phone Number in Long Text</a></li><li><a href="Locate_All_Torture_Test.html">Locate All Torture Test</a></li><li><a href="Backtrack_Torture_Test.html">Backtrack Torture Test</a></li></ul>
+</body>
+</html>
+                

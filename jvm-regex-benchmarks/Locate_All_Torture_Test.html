@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="view-transition" content="same-origin"> <!-- Opt-in --> 
 <link rel="prefetch"href="index.html"/>
-<link rel="prefetch" href="Compile_Long_Pattern.html"/><link rel="prefetch" href="DotStar_vs_Long_Text.html"/><link rel="prefetch" href="Fail_to_Locate_Phone_Number_in_Long_Text.html"/><link rel="prefetch" href="Fail_to_Match_Phone_Number_in_Long_Text.html"/><link rel="prefetch" href="Locate_Phone_Number_in_Long_Text.html"/><link rel="prefetch" href="Match_Phone_Number_in_Long_Text.html"/><link rel="prefetch" href="Locate_All_Torture_Test.html"/><link rel="prefetch" href="Backtrack_Torture_Test.html"/>
+<link rel="prefetch" href="Compile_Long_Pattern.html"/><link rel="prefetch" href="DotStar_vs_Long_Text.html"/><link rel="prefetch" href="Fail_to_Locate_Phone_Number_in_Long_Text.html"/><link rel="prefetch" href="Fail_to_Match_Phone_Number_in_Long_Text.html"/><link rel="prefetch" href="Locate_Phone_Number_in_Long_Text.html"/><link rel="prefetch" href="Match_ABC_in_Long_Text.html"/><link rel="prefetch" href="Match_Phone_Number_in_Long_Text.html"/><link rel="prefetch" href="Locate_All_Torture_Test.html"/><link rel="prefetch" href="Backtrack_Torture_Test.html"/>
 <title><b>Locate All Torture Test</b><br>repeatedly: /a(.*X)?/ vs a+<br><sup>higher is better</sup></title>
  <style>
 .chart {
@@ -32,14 +32,14 @@ a {
 <div id="chart"></div>
 <script>
 (function () {
-  var data0 = {"x":[32.0,64.0,128.0,256.0,512.0,1024.0,2048.0,4096.0,8192.0,16384.0],"name":"BricsScreen","type":"scatter","y":[7.1948134071456E7,5.0122661682688E7,3.7204537626368E7,1.3869743558912E7,6486785.11104,4644920.030208,2842554.830848,1405841.997824,682808.598528,301665.173504]};
-  var data1 = {"x":[32.0,64.0,128.0,256.0,512.0,1024.0,2048.0,4096.0,8192.0,16384.0],"name":"DkBrics","type":"scatter","y":[5.076196237344E7,6.1589361912832E7,3.5627876035072E7,1.7013918280704E7,8218975.915008,5019352.723456,2518299.138048,1332591.599616,741929.254912,391153.664]};
-  var data2 = {"x":[32.0,64.0,128.0,256.0,512.0,1024.0,2048.0,4096.0,8192.0,16384.0],"name":"Florian","type":"scatter","y":[2.9814806882752E7,1.70856272608E7,9744123.8688,7865709.996544,4573231.22944,2012239.309824,1082569.199616,556792.844288,237920.927744,132409.884672]};
-  var data3 = {"x":[32.0,64.0,128.0,256.0,512.0,1024.0,2048.0,4096.0,8192.0,16384.0],"name":"JavaUtil","type":"scatter","y":[3.0482884490624E7,3.110907348608E7,1.776995794496E7,1.4362651405056E7,9886979.635712,3829392.22528,2441307.35104,1208357.003264,560832.258048,318079.71328]};
-  var data4 = {"x":[32.0,64.0,128.0,256.0,512.0,1024.0,2048.0,4096.0,8192.0,16384.0],"name":"Joni","type":"scatter","y":[5.186718591184E7,5.2390575961728E7,7.1882836106496E7,7.5070387600128E7,4.0391604094976E7,1.9731002375168E7,1.1365437794304E7,7173143.293952,4055426.342912,1893115.953152]};
-  var data5 = {"x":[32.0,64.0,128.0,256.0,512.0,1024.0,2048.0,4096.0,8192.0,16384.0],"name":"KMY","type":"scatter","y":[4.02103413504E7,2.4807583988224E7,2.6365640712192E7,2.0009615555584E7,1.1292932066304E7,6500986.73152,4162807.26528,1890858.94656,874507.108352,442567.442432]};
-  var data6 = {"x":[32.0,64.0,128.0,256.0,512.0,1024.0,2048.0,4096.0,8192.0,16384.0],"name":"MonqJFA","type":"scatter","y":[2.2837884205376E7,1.8477417333568E7,9953725.2928,7246701.07648,4040409.340928,2218116.450304,847201.472512,537209.982976,228892.606464,134677.659648]};
-  var data7 = {"x":[32.0,64.0,128.0,256.0,512.0,1024.0,2048.0,4096.0,8192.0,16384.0],"name":"Re2J","type":"scatter","y":[2448823.273888,2703570.329344,1548858.484864,1372621.203712,782827.956224,537418.943488,282794.426368,142009.847808,75600.060416,33412.857856]};
+  var data0 = {"x":[32.0,64.0,128.0,256.0,512.0,1024.0,2048.0,4096.0,8192.0,16384.0],"name":"BricsScreen","type":"scatter","y":[4.34730328104E7,4.0440936513408E7,2.1398645762304E7,1.7675848746496E7,7515436.72576,4587475.252224,2531954.960384,1232006.139904,643869.786112,285935.12448]};
+  var data1 = {"x":[32.0,64.0,128.0,256.0,512.0,1024.0,2048.0,4096.0,8192.0,16384.0],"name":"DkBrics","type":"scatter","y":[5.574123656544E7,3.6944135386176E7,2.205906100096E7,1.9490991236864E7,1.2079987650048E7,5963235.57888,2811721.0112,1669625.61024,724939.808768,362305.060864]};
+  var data2 = {"x":[32.0,64.0,128.0,256.0,512.0,1024.0,2048.0,4096.0,8192.0,16384.0],"name":"Florian","type":"scatter","y":[1.837003403168E7,2.1617268828544E7,1.0529732762752E7,1.0904220072704E7,4437207.40608,1876155.225088,912282.18368,487063.793664,296252.596224,126247.23968]};
+  var data3 = {"x":[32.0,64.0,128.0,256.0,512.0,1024.0,2048.0,4096.0,8192.0,16384.0],"name":"JavaUtil","type":"scatter","y":[3.3662101271232E7,2.3218476624704E7,5.1255426328064E7,1.2911494326784E7,9837460.151296,3832399.3088,2294048.960512,1298916.67968,579319.422976,307169.640448]};
+  var data4 = {"x":[32.0,64.0,128.0,256.0,512.0,1024.0,2048.0,4096.0,8192.0,16384.0],"name":"Joni","type":"scatter","y":[7.9658428398304E7,4.3577671925952E7,3.49427773888E7,5.6584432904704E7,3.6680893818368E7,2.229810971136E7,1.2251542837248E7,6037589.860352,3686872.43264,1863617.052672]};
+  var data5 = {"x":[32.0,64.0,128.0,256.0,512.0,1024.0,2048.0,4096.0,8192.0,16384.0],"name":"KMY","type":"scatter","y":[4.5921501238976E7,2.5878136856256E7,2.1134691528192E7,1.6997029818112E7,1.064262571008E7,6958403.994624,3968263.217152,1916824.18688,874750.73024,358942.588928]};
+  var data6 = {"x":[32.0,64.0,128.0,256.0,512.0,1024.0,2048.0,4096.0,8192.0,16384.0],"name":"MonqJFA","type":"scatter","y":[1.7869046569984E7,1.2621165869696E7,1.3451231637248E7,8352267.123456,4206566.744064,2123444.662272,1146329.790464,503167.832064,257354.612736,128866.025472]};
+  var data7 = {"x":[32.0,64.0,128.0,256.0,512.0,1024.0,2048.0,4096.0,8192.0,16384.0],"name":"Re2J","type":"scatter","y":[2155133.971296,6607517.24256,4974634.3072,1952491.947264,619246.424576,596392.787968,263189.960704,147105.394688,70939.148288,34237.186048]};
 
   var data = [data0, data1, data2, data3, data4, data5, data6, data7];
   var layout = {"height":800,"title":"<b>Locate All Torture Test</b><br>repeatedly: /a(.*X)?/ vs a+<br><sup>higher is better</sup>","yaxis":{"title":"Throughput(bytes/s)","type":"log"},"xaxis":{"title":"Data Length (bytes)","type":"log"}};
@@ -48,7 +48,8 @@ a {
   Plotly.plot('chart', data, layout, config);
 })();
 </script>
-<ul><li><a href="index.html">Menu</a></li><li><a href="Compile_Long_Pattern.html">Compile Long Pattern</a></li><li><a href="DotStar_vs_Long_Text.html">DotStar vs Long Text</a></li><li><a href="Fail_to_Locate_Phone_Number_in_Long_Text.html">Fail to Locate Phone Number in Long Text</a></li><li><a href="Fail_to_Match_Phone_Number_in_Long_Text.html">Fail to Match Phone Number in Long Text</a></li><li><a href="Locate_Phone_Number_in_Long_Text.html">Locate Phone Number in Long Text</a></li><li><a href="Match_Phone_Number_in_Long_Text.html">Match Phone Number in Long Text</a></li><li><a href="Locate_All_Torture_Test.html">Locate All Torture Test</a></li><li><a href="Backtrack_Torture_Test.html">Backtrack Torture Test</a></li></ul>
+<p>Benchmark code and descriptions are at <a href="https://github.com/henryware/jvm-regex-benchmarks">https://github.com/henryware/jvm-regex-benchmarks</a></p>
+<ul><li><a href="index.html">Menu</a></li><li><a href="Compile_Long_Pattern.html">Compile Long Pattern</a></li><li><a href="DotStar_vs_Long_Text.html">DotStar vs Long Text</a></li><li><a href="Fail_to_Locate_Phone_Number_in_Long_Text.html">Fail to Locate Phone Number in Long Text</a></li><li><a href="Fail_to_Match_Phone_Number_in_Long_Text.html">Fail to Match Phone Number in Long Text</a></li><li><a href="Locate_Phone_Number_in_Long_Text.html">Locate Phone Number in Long Text</a></li><li><a href="Match_ABC_in_Long_Text.html">Match ABC in Long Text</a></li><li><a href="Match_Phone_Number_in_Long_Text.html">Match Phone Number in Long Text</a></li><li><a href="Locate_All_Torture_Test.html">Locate All Torture Test</a></li><li><a href="Backtrack_Torture_Test.html">Backtrack Torture Test</a></li></ul>
 </body>
 </html>
                 

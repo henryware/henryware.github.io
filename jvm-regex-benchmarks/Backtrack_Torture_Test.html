@@ -6,7 +6,7 @@
 <meta name="view-transition" content="same-origin"> <!-- Opt-in --> 
 <link rel="prefetch"href="index.html"/>
 <link rel="prefetch" href="Compile_Long_Pattern.html"/><link rel="prefetch" href="DotStar_vs_Long_Text.html"/><link rel="prefetch" href="Fail_to_Locate_Phone_Number_in_Long_Text.html"/><link rel="prefetch" href="Fail_to_Match_Phone_Number_in_Long_Text.html"/><link rel="prefetch" href="Locate_Phone_Number_in_Long_Text.html"/><link rel="prefetch" href="Match_ABC_in_Long_Text.html"/><link rel="prefetch" href="Match_Phone_Number_in_Long_Text.html"/><link rel="prefetch" href="Locate_All_Torture_Test.html"/><link rel="prefetch" href="Backtrack_Torture_Test.html"/>
-<title><b>Backtrack Torture Test</b><br>/(a?)ᴺaᴺ/ vs aᴺ<br><sup>lower is better (DFAs too fast to measure)</sup></title>
+<title><b>Backtrack Torture Test</b><br>/(a?)ᴺaᴺ/ vs aᴺ<br><sup>lower is better (DFAs and JITrex are too fast to measure)</sup></title>
  <style>
 .chart {
   view-transition-name: chart-div; /* Unique identifier for transition */
@@ -32,14 +32,14 @@ a {
 <div id="chart"></div>
 <script>
 (function () {
-  var data0 = {"x":[4.0,5.0,6.0,7.0,9.0,11.0,13.0,15.0,17.0],"name":"Florian","type":"scatter","y":[1.0E-6,2.0E-6,3.0E-6,7.0E-6,3.1E-5,1.36E-4,5.91E-4,0.002651,0.01162]};
-  var data1 = {"x":[5.0,6.0,7.0,9.0,11.0,13.0,15.0,17.0],"name":"JavaUtil","type":"scatter","y":[1.0E-6,1.0E-6,3.0E-6,1.3E-5,6.4E-5,2.75E-4,0.001188,0.005375]};
-  var data2 = {"x":[4.0,5.0,6.0,7.0,9.0,11.0,13.0,15.0,17.0],"name":"Joni","type":"scatter","y":[1.0E-6,1.0E-6,2.0E-6,3.0E-6,1.3E-5,5.0E-5,2.03E-4,8.49E-4,0.002986]};
-  var data3 = {"x":[7.0,9.0,11.0,13.0,15.0,17.0],"name":"KMY","type":"scatter","y":[1.0E-6,3.0E-6,1.1E-5,4.5E-5,1.8E-4,8.68E-4]};
-  var data4 = {"x":[3.0,4.0,5.0,6.0,7.0,9.0,11.0,13.0,15.0,17.0],"name":"Re2J","type":"scatter","y":[1.0E-6,1.0E-6,2.0E-6,3.0E-6,4.0E-6,6.0E-6,8.0E-6,1.1E-5,1.4E-5,1.8E-5]};
+  var data0 = {"x":[4.0,5.0,6.0,7.0,9.0,11.0,13.0,15.0,17.0],"name":"Florian","type":"scatter","y":[1.0E-6,2.0E-6,3.0E-6,7.0E-6,3.1E-5,1.41E-4,5.97E-4,0.002734,0.011823]};
+  var data1 = {"x":[5.0,6.0,7.0,9.0,11.0,13.0,15.0,17.0],"name":"JavaUtil","type":"scatter","y":[1.0E-6,1.0E-6,3.0E-6,1.4E-5,6.1E-5,2.74E-4,0.001206,0.005687]};
+  var data2 = {"x":[5.0,6.0,7.0,9.0,11.0,13.0,15.0,17.0],"name":"Joni","type":"scatter","y":[1.0E-6,2.0E-6,3.0E-6,1.2E-5,5.0E-5,1.92E-4,8.41E-4,0.002945]};
+  var data3 = {"x":[7.0,9.0,11.0,13.0,15.0,17.0],"name":"KMY","type":"scatter","y":[1.0E-6,3.0E-6,1.1E-5,4.5E-5,1.79E-4,8.68E-4]};
+  var data4 = {"x":[3.0,4.0,5.0,6.0,7.0,9.0,11.0,13.0,15.0,17.0],"name":"Re2J","type":"scatter","y":[1.0E-6,2.0E-6,2.0E-6,3.0E-6,4.0E-6,6.0E-6,8.0E-6,1.1E-5,1.4E-5,1.8E-5]};
 
   var data = [data0, data1, data2, data3, data4];
-  var layout = {"height":800,"title":"<b>Backtrack Torture Test</b><br>/(a?)ᴺaᴺ/ vs aᴺ<br><sup>lower is better (DFAs too fast to measure)</sup>","yaxis":{"title":"Time(s/op)","type":"log"},"xaxis":{"title":"Data Length (bytes)","type":"log"}};
+  var layout = {"height":800,"title":"<b>Backtrack Torture Test</b><br>/(a?)ᴺaᴺ/ vs aᴺ<br><sup>lower is better (DFAs and JITrex are too fast to measure)</sup>","yaxis":{"title":"Time(s/op)","type":"log"},"xaxis":{"title":"Data Length (bytes)","type":"log"}};
  var config = {};
 
   Plotly.plot('chart', data, layout, config);

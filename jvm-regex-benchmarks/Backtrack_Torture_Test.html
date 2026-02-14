@@ -32,13 +32,16 @@ a {
 <div id="chart"></div>
 <script>
 (function () {
-  var data0 = {"x":[4.0,5.0,6.0,7.0,9.0,11.0,13.0,15.0,17.0],"name":"Florian","type":"scatter","y":[1.0E-6,2.0E-6,3.0E-6,7.0E-6,3.1E-5,1.41E-4,5.97E-4,0.002734,0.011823]};
-  var data1 = {"x":[5.0,6.0,7.0,9.0,11.0,13.0,15.0,17.0],"name":"JavaUtil","type":"scatter","y":[1.0E-6,1.0E-6,3.0E-6,1.4E-5,6.1E-5,2.74E-4,0.001206,0.005687]};
-  var data2 = {"x":[5.0,6.0,7.0,9.0,11.0,13.0,15.0,17.0],"name":"Joni","type":"scatter","y":[1.0E-6,2.0E-6,3.0E-6,1.2E-5,5.0E-5,1.92E-4,8.41E-4,0.002945]};
-  var data3 = {"x":[7.0,9.0,11.0,13.0,15.0,17.0],"name":"KMY","type":"scatter","y":[1.0E-6,3.0E-6,1.1E-5,4.5E-5,1.79E-4,8.68E-4]};
-  var data4 = {"x":[3.0,4.0,5.0,6.0,7.0,9.0,11.0,13.0,15.0,17.0],"name":"Re2J","type":"scatter","y":[1.0E-6,2.0E-6,2.0E-6,3.0E-6,4.0E-6,6.0E-6,8.0E-6,1.1E-5,1.4E-5,1.8E-5]};
+  var data0 = {"x":[4.0,5.0,6.0,7.0,9.0,11.0,13.0,15.0,17.0],"name":"Florian","type":"scatter","y":[1.0E-6,2.0E-6,3.0E-6,7.0E-6,3.3E-5,1.43E-4,6.24E-4,0.002657,0.011386]};
+  var data1 = {"x":[2.0,3.0,4.0,5.0,6.0,7.0,9.0,11.0,13.0,15.0,17.0],"name":"HyperscanFFI","type":"scatter","y":[3.2E-5,3.1E-5,3.0E-5,3.1E-5,3.0E-5,3.2E-5,2.9E-5,2.9E-5,3.1E-5,3.0E-5,3.2E-5]};
+  var data2 = {"x":[5.0,6.0,7.0,9.0,11.0,13.0,15.0,17.0],"name":"JavaUtil","type":"scatter","y":[1.0E-6,1.0E-6,3.0E-6,1.4E-5,6.3E-5,2.79E-4,0.001198,0.005772]};
+  var data3 = {"x":[4.0,5.0,6.0,7.0,9.0,11.0,13.0,15.0,17.0],"name":"Joni","type":"scatter","y":[1.0E-6,1.0E-6,2.0E-6,3.0E-6,1.3E-5,5.0E-5,2.03E-4,7.51E-4,0.002961]};
+  var data4 = {"x":[7.0,9.0,11.0,13.0,15.0,17.0],"name":"KMY","type":"scatter","y":[1.0E-6,3.0E-6,1.2E-5,4.4E-5,1.85E-4,8.25E-4]};
+  var data5 = {"x":[5.0,6.0,7.0,9.0,11.0,13.0,15.0,17.0],"name":"Pcre2FFI","type":"scatter","y":[1.0E-6,1.0E-6,1.0E-6,2.0E-6,9.0E-6,3.5E-5,1.29E-4,5.1E-4]};
+  var data6 = {"x":[2.0,3.0,4.0,5.0,6.0,7.0,9.0,11.0,13.0,15.0,17.0],"name":"Re2FFI","type":"scatter","y":[1.0E-6,1.0E-6,1.0E-6,1.0E-6,1.0E-6,1.0E-6,1.0E-6,1.0E-6,1.0E-6,1.0E-6,1.0E-6]};
+  var data7 = {"x":[2.0,3.0,4.0,5.0,6.0,7.0,9.0,11.0,13.0,15.0,17.0],"name":"Re2J","type":"scatter","y":[1.0E-6,1.0E-6,1.0E-6,2.0E-6,3.0E-6,3.0E-6,5.0E-6,7.0E-6,1.0E-5,1.3E-5,1.6E-5]};
 
-  var data = [data0, data1, data2, data3, data4];
+  var data = [data0, data1, data2, data3, data4, data5, data6, data7];
   var layout = {"height":800,"title":"<b>Backtrack Torture Test</b><br>/(a?)ᴺaᴺ/ vs aᴺ<br><sup>lower is better (DFAs and JITrex are too fast to measure)</sup>","yaxis":{"title":"Time(s/op)","type":"log"},"xaxis":{"title":"Data Length (bytes)","type":"log"}};
  var config = {};
 

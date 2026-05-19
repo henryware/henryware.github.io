@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="view-transition" content="same-origin"> <!-- Opt-in --> 
+<link rel="prefetch"href="index.html"/>
+<link rel="prefetch" href="Compile_Long_Pattern.html"/><link rel="prefetch" href="DotStar_vs_Long_Text.html"/><link rel="prefetch" href="Fail_to_Locate_Phone_Number_in_Long_Text.html"/><link rel="prefetch" href="Fail_to_Match_Phone_Number_in_Long_Text.html"/><link rel="prefetch" href="Fail_to_Match_Phone_Number_in_Long_Unicode_Text.html"/><link rel="prefetch" href="Locate_Phone_Number_in_Long_Text.html"/><link rel="prefetch" href="Match_ABC_in_Long_Text.html"/><link rel="prefetch" href="Match_Phone_Number_in_Long_Text.html"/><link rel="prefetch" href="Match_Phone_Number_in_Long_Unicode_Text.html"/><link rel="prefetch" href="Locate_All_Torture_Test.html"/><link rel="prefetch" href="Backtrack_Torture_Test.html"/><link rel="prefetch" href="Engine_Amygdalum.html"/><link rel="prefetch" href="Engine_BricsScreen.html"/><link rel="prefetch" href="Engine_DkBrics.html"/><link rel="prefetch" href="Engine_Florian.html"/><link rel="prefetch" href="Engine_HyperscanFFI.html"/><link rel="prefetch" href="Engine_JavaUtil.html"/><link rel="prefetch" href="Engine_JiTrex.html"/><link rel="prefetch" href="Engine_Joni.html"/><link rel="prefetch" href="Engine_JoniUTF16.html"/><link rel="prefetch" href="Engine_KMY.html"/><link rel="prefetch" href="Engine_MonqJFA.html"/><link rel="prefetch" href="Engine_Needle.html"/><link rel="prefetch" href="Engine_Pcre2FFI.html"/><link rel="prefetch" href="Engine_Re2FFI.html"/><link rel="prefetch" href="Engine_Re2J.html"/>
+<title><b>Re2J</b><br>Phone-number throughput: {success|fail} × {match|locate}<br><sup>higher is better</sup></title>
+ <style>
+.chart {
+  view-transition-name: chart-div; /* Unique identifier for transition */
+}
+@keyframes fade-in {
+ from { opacity: 0; }
+ to { opacity: 1; }
+}
+a {
+ display: block;
+ text-align: left;
+ margin-top: 20px;
+ color: #0066cc;
+ text-decoration: none;
+ }
+::view-transition-new(root) {
+ animation: fade-in 0.9s ease;
+ }
+</style>
+<script src="https://cdn.plot.ly/plotly-1.58.5.min.js"></script>
+</head>
+<body>
+<div id="chart"></div>
+<script>
+(function () {
+  var data0 = {"x":[32.0,64.0,128.0,256.0,512.0,1024.0,2048.0,4096.0,8192.0,16384.0,32768.0,65536.0,131072.0,262144.0,524288.0,1048576.0,2097152.0,4194304.0],"name":"Match A hit","type":"scatter","y":[4679685.131264,5028636.038528,5083485.94688,5100206.295808,5535809.249792,5606497.463296,5680030.267392,5553562.722304,5529716.98176,5621635.989504,5544017.625088,5574202.621952,5572194.46784,5557762.916352,5491203.244032,5550735.622144,5576549.466112,5555519.225856]};
+  var data1 = {"x":[32.0,64.0,128.0,256.0,512.0,1024.0,2048.0,4096.0,8192.0,16384.0,32768.0,65536.0,131072.0,262144.0,524288.0,1048576.0,2097152.0,4194304.0],"name":"Match A miss","type":"scatter","y":[5817157.459392,5688088.464768,5413899.902336,5669825.13024,5722027.0464,5518990.173184,5745518.948352,5607010.42688,5775210.889216,5577378.430976,5584401.170432,5629026.697216,5545003.188224,5601086.406656,5578351.968256,5574636.863488,5425489.5104,5581544.882176]};
+  var data2 = {"x":[32.0,64.0,128.0,256.0,512.0,1024.0,2048.0,4096.0,8192.0,16384.0,32768.0,65536.0,131072.0,262144.0,524288.0,1048576.0,2097152.0,4194304.0],"name":"Loc A hit","type":"scatter","y":[4737446.63664,4960655.789504,4819117.2288,5139504.697344,5482260.54656,5607915.41248,5598521.23136,5602918.58432,5582338.12992,5559926.816768,5561850.888192,5496618.483712,5532486.729728,5530241.204224,5542737.608704,5557865.938944,5544297.365504,5574095.798272]};
+  var data3 = {"x":[32.0,64.0,128.0,256.0,512.0,1024.0,2048.0,4096.0,8192.0,16384.0,32768.0,65536.0,131072.0,262144.0,524288.0,1048576.0,2097152.0,4194304.0],"name":"Loc A miss","type":"scatter","y":[5413335.206784,5516450.278528,5727095.6192,5664296.725504,5751379.226112,5481938.423808,5544709.656576,5482312.876032,5595567.39072,5632750.895104,5502104.993792,5511114.326016,5515022.434304,5580088.147968,5552774.578176,5576954.216448,5598464.704512,5368608.456704]};
+  var data4 = {"x":[32.0,64.0,128.0,256.0,512.0,1024.0,2048.0,4096.0,8192.0,16384.0,32768.0,65536.0,131072.0,262144.0,524288.0,1048576.0,2097152.0,4194304.0],"name":"Match U hit","type":"scatter","y":[4594359.106752,5269405.220992,5536757.743872,5719490.204672,5856249.286144,5931465.09824,5991575.764992,5887652.352,5839403.474944,5910076.407808,5986686.271488,5882392.346624,6000767.533056,5985915.633664,5942477.324288,5914605.125632,5966779.121664,5797434.097664]};
+  var data5 = {"x":[32.0,64.0,128.0,256.0,512.0,1024.0,2048.0,4096.0,8192.0,16384.0,32768.0,65536.0,131072.0,262144.0,524288.0,1048576.0,2097152.0,4194304.0],"name":"Match U miss","type":"scatter","y":[6273228.315936,6344973.201216,6484566.715392,6592035.363584,6562268.233216,6575839.485952,6634339.862528,6432212.893696,6484557.488128,6535471.464448,6449958.453248,6413382.385664,6442816.765952,6436624.007168,6410480.386048,6477716.652032,6527154.91328,6385500.684288]};
+
+  var data = [data0, data1, data2, data3, data4, data5];
+  var layout = {"height":800,"title":"<b>Re2J</b><br>Phone-number throughput: {success|fail} × {match|locate}<br><sup>higher is better</sup>","yaxis":{"title":"Throughput(bytes/s)","type":"log"},"xaxis":{"title":"Data Length (bytes)","type":"log"}};
+ var config = {};
+
+  Plotly.plot('chart', data, layout, config);
+})();
+</script>
+<p>Benchmark code and descriptions are at <a href="https://github.com/henryware/jvm-regex-benchmarks">https://github.com/henryware/jvm-regex-benchmarks</a></p>
+<ul><li><a href="index.html">Menu</a></li><li><a href="Compile_Long_Pattern.html">Compile Long Pattern</a></li><li><a href="DotStar_vs_Long_Text.html">DotStar vs Long Text</a></li><li><a href="Fail_to_Locate_Phone_Number_in_Long_Text.html">Fail to Locate Phone Number in Long Text</a></li><li><a href="Fail_to_Match_Phone_Number_in_Long_Text.html">Fail to Match Phone Number in Long Text</a></li><li><a href="Fail_to_Match_Phone_Number_in_Long_Unicode_Text.html">Fail to Match Phone Number in Long Unicode Text</a></li><li><a href="Locate_Phone_Number_in_Long_Text.html">Locate Phone Number in Long Text</a></li><li><a href="Match_ABC_in_Long_Text.html">Match ABC in Long Text</a></li><li><a href="Match_Phone_Number_in_Long_Text.html">Match Phone Number in Long Text</a></li><li><a href="Match_Phone_Number_in_Long_Unicode_Text.html">Match Phone Number in Long Unicode Text</a></li><li><a href="Locate_All_Torture_Test.html">Locate All Torture Test</a></li><li><a href="Backtrack_Torture_Test.html">Backtrack Torture Test</a></li></ul><h2>Per-Engine Comparisons</h2><ul><li><a href="Engine_Amygdalum.html">Amygdalum</a></li><li><a href="Engine_BricsScreen.html">BricsScreen</a></li><li><a href="Engine_DkBrics.html">DkBrics</a></li><li><a href="Engine_Florian.html">Florian</a></li><li><a href="Engine_HyperscanFFI.html">HyperscanFFI</a></li><li><a href="Engine_JavaUtil.html">JavaUtil</a></li><li><a href="Engine_JiTrex.html">JiTrex</a></li><li><a href="Engine_Joni.html">Joni</a></li><li><a href="Engine_JoniUTF16.html">JoniUTF16</a></li><li><a href="Engine_KMY.html">KMY</a></li><li><a href="Engine_MonqJFA.html">MonqJFA</a></li><li><a href="Engine_Needle.html">Needle</a></li><li><a href="Engine_Pcre2FFI.html">Pcre2FFI</a></li><li><a href="Engine_Re2FFI.html">Re2FFI</a></li><li><a href="Engine_Re2J.html">Re2J</a></li></ul>
+</body>
+</html>
+                

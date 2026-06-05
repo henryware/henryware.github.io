@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="view-transition" content="same-origin"> <!-- Opt-in --> 
+<link rel="prefetch"href="index.html"/>
+<link rel="prefetch" href="Compile_Jumbo.html"/><link rel="prefetch" href="Locate_Company_Cjk_Hit.html"/><link rel="prefetch" href="Locate_Company_Cjk_Miss.html"/><link rel="prefetch" href="Locate_Phone_Ascii_Hit.html"/><link rel="prefetch" href="Locate_Phone_Ascii_Miss.html"/><link rel="prefetch" href="Match_Abc_Ascii_Hit.html"/><link rel="prefetch" href="Match_Phone_Ascii_Hit.html"/><link rel="prefetch" href="Match_Phone_Ascii_Miss.html"/><link rel="prefetch" href="Match_Phone_Cjk_Hit.html"/><link rel="prefetch" href="Match_Phone_Cjk_Miss.html"/><link rel="prefetch" href="WholeMatch_DotStar_Ascii.html"/><link rel="prefetch" href="LocateAll_Torture_Test.html"/><link rel="prefetch" href="Backtrack_Torture_Test.html"/><link rel="prefetch" href="Engine_Amygdalum.html"/><link rel="prefetch" href="Engine_BricsScreen.html"/><link rel="prefetch" href="Engine_DkBrics.html"/><link rel="prefetch" href="Engine_Florian.html"/><link rel="prefetch" href="Engine_HyperscanFFI.html"/><link rel="prefetch" href="Engine_JavaUtil.html"/><link rel="prefetch" href="Engine_JiTrex.html"/><link rel="prefetch" href="Engine_Joni.html"/><link rel="prefetch" href="Engine_JoniUTF16.html"/><link rel="prefetch" href="Engine_KMY.html"/><link rel="prefetch" href="Engine_MonqJFA.html"/><link rel="prefetch" href="Engine_Needle.html"/><link rel="prefetch" href="Engine_Pcre2FFI.html"/><link rel="prefetch" href="Engine_Re2FFI.html"/><link rel="prefetch" href="Engine_Re2J.html"/>
+<title>Compile Jumbo</title>
+ <style>
+.chart {
+  view-transition-name: chart-div; /* Unique identifier for transition */
+}
+@keyframes fade-in {
+ from { opacity: 0; }
+ to { opacity: 1; }
+}
+a {
+ display: block;
+ text-align: left;
+ margin-top: 20px;
+ color: #0066cc;
+ text-decoration: none;
+ }
+::view-transition-new(root) {
+ animation: fade-in 0.9s ease;
+ }
+</style>
+<script src="https://cdn.plot.ly/plotly-1.58.5.min.js"></script>
+</head>
+<body>
+<div id="chart"></div>
+<script>
+(function () {
+  var data0 = {"x":[32.0,64.0,128.0,256.0,512.0,1024.0,2048.0],"name":"Amygdalum","type":"scatter","y":[1114.532064,504.80928,187.426432,111.149056,31.002112,12.607488,4.28032]};
+  var data1 = {"x":[32.0,64.0,128.0,256.0,512.0,1024.0,2048.0,4096.0,8192.0,16384.0,32768.0],"name":"BricsScreen","type":"scatter","y":[21712.639328,22964.599296,14433.701888,14404.649216,10289.854976,8566.688768,6969.049088,7045.189632,6520.782848,6645.76,6524.633088]};
+  var data2 = {"x":[32.0,64.0,128.0,256.0,512.0,1024.0,2048.0,4096.0,8192.0,16384.0,32768.0],"name":"DkBrics","type":"scatter","y":[52856.18768,54199.349184,61712.754304,57589.639168,34559.88224,24933.623808,32857.225216,28313.051136,26970.267648,24962.465792,19504.365568]};
+  var data3 = {"x":[32.0,64.0,128.0,256.0,512.0,1024.0,2048.0,4096.0,8192.0,16384.0,32768.0,65536.0,131072.0,262144.0,524288.0,1048576.0,2097152.0,4194304.0],"name":"Florian","type":"scatter","y":[5.3376286280416E7,6.0199064105216E7,6.7780716986624E7,7.4108713596416E7,7.5644658845696E7,7.6092042361856E7,7.922954402816E7,7.571217389568E7,7.6958850023424E7,7.5312461856768E7,7.1476676952064E7,7.154417434624E7,7.0827968823296E7,1.23089159979008E8,2.470364315648E8,4.95438724595712E8,9.4906769997824E8,1.96841784213504E9]};
+  var data4 = {"x":[32.0,64.0,128.0,256.0,512.0,1024.0,2048.0,4096.0,8192.0],"name":"HyperscanFFI","type":"scatter","y":[17383.190624,17901.941888,18093.513984,16439.317248,13050.233856,9226.22976,5507.383296,3111.079936,1334.796288]};
+  var data5 = {"x":[32.0,64.0,128.0,256.0,512.0,1024.0,2048.0,4096.0,8192.0,16384.0,32768.0,65536.0,131072.0,262144.0,524288.0,1048576.0,2097152.0,4194304.0],"name":"JavaUtil","type":"scatter","y":[6.1443851825216E7,6.5341835071744E7,7.5092073242752E7,7.6191523092992E7,7.9644333473792E7,8.0933972606976E7,8.3822647322624E7,8.3487166291968E7,8.2587583340544E7,8.2744243191808E7,7.5285087977472E7,7.5520182714368E7,7.5042129051648E7,1.30893265502208E8,2.6130999410688E8,5.24110714109952E8,1.049548382273536E9,2.0894552424448E9]};
+  var data6 = {"x":[32.0,64.0,128.0,256.0,512.0,1024.0,2048.0],"name":"JiTrex","type":"scatter","y":[57295.299296,95606.586944,146569.362304,194602.540032,226893.844992,247918.739456,257533.413376]};
+  var data7 = {"x":[32.0,64.0,128.0,256.0,512.0,1024.0,2048.0,4096.0,8192.0,16384.0,32768.0,65536.0,131072.0,262144.0,524288.0,1048576.0,2097152.0,4194304.0],"name":"Joni","type":"scatter","y":[4600154.676256,5402041.868736,5747068.128384,5751814.101248,5540817.126912,5884129.376256,5540809.25696,5059006.181376,5051292.2624,4619706.073088,5821482.827776,5840465.362944,6108027.813888,8892057.124864,2.1130765664256E7,4.2701142622208E7,8.3134058070016E7,1.71713224507392E8]};
+  var data8 = {"x":[32.0,64.0,128.0,256.0,512.0,1024.0,2048.0,4096.0,8192.0,16384.0,32768.0,65536.0,131072.0,262144.0,524288.0,1048576.0,2097152.0,4194304.0],"name":"JoniUTF16","type":"scatter","y":[4630706.34848,5447579.212288,6420807.598976,6522436.71936,6592280.960512,6718597.462016,6204455.89504,5938269.851648,5943141.793792,5297873.747968,5847264.198656,4898969.878528,4849782.62016,1.1124899577856E7,1.7026123825152E7,3.4351435743232E7,7.5920943611904E7,1.36537559793664E8]};
+  var data9 = {"x":[32.0,64.0,128.0,256.0,512.0,1024.0],"name":"KMY","type":"scatter","y":[40099.530496,60400.1952,80011.53408,93597.479168,100039.143936,103919.51872]};
+  var data10 = {"x":[32.0,64.0,128.0,256.0,512.0,1024.0,2048.0,4096.0,8192.0,16384.0,32768.0,65536.0,131072.0,262144.0,524288.0,1048576.0,2097152.0,4194304.0],"name":"MonqJFA","type":"scatter","y":[1154584.724288,1344958.222912,1300489.250048,1250223.3088,1327970.562048,1267014.750208,997570.760704,824058.834944,556592.480256,332259.49184,255792.90624,95635.111936,30758.535168,46266.843136,76175.900672,174290.108416,340449.558528,672950.910976]};
+  var data11 = {"x":[32.0,64.0,128.0,256.0,512.0,1024.0,2048.0,4096.0,8192.0,16384.0],"name":"Needle","type":"scatter","y":[6898.78944,7126.226752,4279.433984,2014.2592,927.436288,454.761472,231.061504,88.174592,57.884672,23.461888]};
+  var data12 = {"x":[32.0,64.0,128.0,256.0,512.0,1024.0,2048.0,4096.0,8192.0,16384.0],"name":"Pcre2FFI","type":"scatter","y":[1007472.50512,1466206.13728,3898120.67328,2226190.258176,2432108.328448,2448765.755392,2497080.100864,1804745.252864,2728866.971648,4229296.930816]};
+  var data13 = {"x":[32.0,64.0,128.0,256.0,512.0,1024.0,2048.0,4096.0,8192.0,16384.0,32768.0,65536.0,131072.0,262144.0,524288.0,1048576.0,2097152.0,4194304.0],"name":"Re2FFI","type":"scatter","y":[1598981.862656,1855650.700096,2800356.187392,3195172.280576,3255733.147648,3390380.01664,3437013.149696,3434703.273984,3346047.401984,3271165.100032,3172867.76832,3087316.877312,2960410.804224,5081679.79008,1.0151681589248E7,2.0328453505024E7,4.1288021835776E7,8.126308810752E7]};
+  var data14 = {"x":[32.0,64.0,128.0,256.0,512.0,1024.0,2048.0,4096.0,8192.0,16384.0,32768.0,65536.0,131072.0,262144.0,524288.0,1048576.0,2097152.0,4194304.0],"name":"Re2J","type":"scatter","y":[8634573.125472,9770609.986176,1.029782625024E7,9786803.192576,9017502.026752,8663372.975104,7409503.051776,5244779.851776,3629795.909632,2037150.990336,712960.507904,290199.896064,137999.417344,211928.743936,419630.153728,839707.000832,1687836.164096,3347788.5952]};
+
+  var data = [data0, data1, data2, data3, data4, data5, data6, data7, data8, data9, data10, data11, data12, data13, data14];
+  var layout = {"height":800,"title":"<b>Compile Jumbo</b><br>/word1|word2|word3.../<br><span style=\"font-size:smaller\">higher is better</span>","yaxis":{"title":"Throughput(chars/s)","type":"log"},"xaxis":{"title":"Pattern length (chars)","type":"log"}};
+ var config = {};
+
+  Plotly.plot('chart', data, layout, config);
+})();
+</script>
+<p>Benchmark code and descriptions are at <a href="https://github.com/henryware/jvm-regex-benchmarks">https://github.com/henryware/jvm-regex-benchmarks</a></p>
+<ul><li><a href="index.html">Menu</a></li><li><a href="Compile_Jumbo.html">Compile Jumbo</a></li><li><a href="Locate_Company_Cjk_Hit.html">Locate Company Cjk Hit</a></li><li><a href="Locate_Company_Cjk_Miss.html">Locate Company Cjk Miss</a></li><li><a href="Locate_Phone_Ascii_Hit.html">Locate Phone Ascii Hit</a></li><li><a href="Locate_Phone_Ascii_Miss.html">Locate Phone Ascii Miss</a></li><li><a href="Match_Abc_Ascii_Hit.html">Match Abc Ascii Hit</a></li><li><a href="Match_Phone_Ascii_Hit.html">Match Phone Ascii Hit</a></li><li><a href="Match_Phone_Ascii_Miss.html">Match Phone Ascii Miss</a></li><li><a href="Match_Phone_Cjk_Hit.html">Match Phone Cjk Hit</a></li><li><a href="Match_Phone_Cjk_Miss.html">Match Phone Cjk Miss</a></li><li><a href="WholeMatch_DotStar_Ascii.html">WholeMatch DotStar Ascii</a></li><li><a href="LocateAll_Torture_Test.html">LocateAll Torture Test</a></li><li><a href="Backtrack_Torture_Test.html">Backtrack Torture Test</a></li></ul><h2>Per-Engine Comparisons</h2><ul><li><a href="Engine_Amygdalum.html">Amygdalum</a></li><li><a href="Engine_BricsScreen.html">BricsScreen</a></li><li><a href="Engine_DkBrics.html">DkBrics</a></li><li><a href="Engine_Florian.html">Florian</a></li><li><a href="Engine_HyperscanFFI.html">HyperscanFFI</a></li><li><a href="Engine_JavaUtil.html">JavaUtil</a></li><li><a href="Engine_JiTrex.html">JiTrex</a></li><li><a href="Engine_Joni.html">Joni</a></li><li><a href="Engine_JoniUTF16.html">JoniUTF16</a></li><li><a href="Engine_KMY.html">KMY</a></li><li><a href="Engine_MonqJFA.html">MonqJFA</a></li><li><a href="Engine_Needle.html">Needle</a></li><li><a href="Engine_Pcre2FFI.html">Pcre2FFI</a></li><li><a href="Engine_Re2FFI.html">Re2FFI</a></li><li><a href="Engine_Re2J.html">Re2J</a></li></ul>
+</body>
+</html>
+                
